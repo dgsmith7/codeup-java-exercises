@@ -67,7 +67,7 @@ public class MethodsExercises {
         Scanner in = new Scanner(System.in);
         System.out.print("Enter a number between " + min + " and " + max + ": ");
         int input = in.nextInt();
-        while (input <= min || input > max) {
+        while (input < min || input > max) {
             System.out.println("Out of range.  Try again.");
             input = getInteger(min, max);
         }
