@@ -9,11 +9,18 @@ public class Input {
         this.scanner = new Scanner(System.in);
     }
 
-    private String getString() {
+    public String getString() {
         return scanner.nextLine();
     }
 
+    public String getString(String specialMessage) {
+        System.out.println(specialMessage + "\n");
+        String s = scanner.nextLine();
+        return s;
+    }
+
     public boolean yesNo() {
+        scanner.nextLine();
         String s = scanner.nextLine();
         return (s.toUpperCase().startsWith("Y"));
     }
@@ -35,7 +42,6 @@ public class Input {
 
     public int getInt(int min, int max, String specialMessage) {
         System.out.println(specialMessage);
-        System.out.print("Please enter a whole number between " + min + " and " + max + ": ");
         int newInput = getInt();
         if (newInput < min || newInput > max) {
             newInput = getInt(min, max);
@@ -62,7 +68,6 @@ public class Input {
 
     public double getDouble(double min, double max, String specialMessage) {
         System.out.println(specialMessage);
-        System.out.print("Please enter a decimal between " + min + " and " + max + ": ");
         double newInput = getDouble();
         if (newInput < min || newInput > max) {
             newInput = getDouble(min, max);

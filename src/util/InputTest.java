@@ -1,8 +1,9 @@
 package util;
 
 public class InputTest {
+    static Input input = new Input();
+
     public static void main(String[] args) {
-        Input input = new Input();
 
         System.out.println();
         System.out.println("Can you ride a bike? ");
