@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Input {
     private final Scanner scanner;
 
-    Input() {
+    public Input() {
         this.scanner = new Scanner(System.in);
     }
 
@@ -14,13 +14,13 @@ public class Input {
     }
 
     public boolean yesNo() {
-        String s = getString();
+        String s = scanner.nextLine();
         return (s.toUpperCase().startsWith("Y"));
     }
 
     public boolean yesNo(String specialMessage) {
         System.out.println(specialMessage);
-        String s = getString();
+        String s = scanner.nextLine();
         return (s.toUpperCase().startsWith("Y"));
     }
 
@@ -46,6 +46,7 @@ public class Input {
     private int getInt() {
         int newInput;
         newInput = this.scanner.nextInt();
+        scanner.nextLine();
         return newInput;
     }
 
@@ -55,6 +56,7 @@ public class Input {
         if (newInput < min || newInput > max) {
             newInput = getDouble(min, max);
         }
+        System.out.println();
         return newInput;
     }
 
@@ -71,6 +73,7 @@ public class Input {
     private double getDouble() {
         double newInput;
         newInput = this.scanner.nextDouble();
+        scanner.nextLine();
         return newInput;
     }
 

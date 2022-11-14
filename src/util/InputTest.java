@@ -7,7 +7,7 @@ public class InputTest {
         System.out.println();
         System.out.println("Can you ride a bike? ");
         System.out.println("Answered in the affirmative = " + input.yesNo());
-        System.out.println("Answered in the affirmative = " + input.yesNo("How about a unicycle?"));
+        System.out.println("Answered in the affirmative = " + input.yesNo("How about a unicycle? "));
 
         System.out.println();
         int intMin = 7;
