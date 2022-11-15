@@ -2,8 +2,9 @@ import java.util.Scanner;
 
 public class TryStuff {
     public static void main(String[] args) {
-        guessAge();
+        //guessAge();
     }
+
 
     public static void guessAge() {
         Scanner in = new Scanner (System.in);
