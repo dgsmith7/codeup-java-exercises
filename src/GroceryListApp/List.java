@@ -33,29 +33,18 @@ public class List {
                 System.out.println("Item added " + newName + ", " + newCat + ", " + newQuant + "\n");
                 done = input.yesNo("Do you want to enter a new item?");
              }
-            sortList();
+            //sortList();   ... or print the items in a sorted way by turning into strings and sorting strings
             System.out.println("Here is your list...");
             displayList();
-        /*
-        --do you wanna make a list
-            y - do you wanna enter new item
-                y - show cats
-                    choose cat
-                    enter name
-                    enter quant
-                n - exit
-            n - exit
-        sort list by name then cat
-        show list
-        while not done
-        show other menu
-            1 edit item
-            2 show all
-            3 show filter by cat - show only
-            4 exit
-        get selection
-        switch sel
-        */
+            done=false;
+            while (!done) {
+                //get selection
+                //        switch selection
+                //1 - edit itme
+                //    2- show all
+                //    3 - show filter b newCat
+                 //       4 - exit  done = true
+            }
         }
     }
 
@@ -71,9 +60,6 @@ public class List {
         }
     }
 
-    public static void sortList() {  // by category and name w/ quant
-        Collections.sort(list);
-    }
 
 }
 
