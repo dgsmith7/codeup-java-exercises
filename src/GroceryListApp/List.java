@@ -3,6 +3,7 @@ package GroceryListApp;
 import util.Input;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class List {
     private static Input input = new Input();
@@ -71,7 +72,7 @@ public class List {
     }
 
     public static void sortList() {  // by category and name w/ quant
-
+        Collections.sort(list);
     }
 
 }
