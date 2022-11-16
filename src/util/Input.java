@@ -10,7 +10,8 @@ public class Input {
     }
 
     public String getString() {
-        return scanner.nextLine();
+        String s = scanner.nextLine();
+        return s;
     }
 
     public String getString(String specialMessage) {
@@ -20,7 +21,6 @@ public class Input {
     }
 
     public boolean yesNo() {
-        scanner.nextLine();
         String s = scanner.nextLine();
         return (s.toUpperCase().startsWith("Y"));
     }
@@ -50,10 +50,14 @@ public class Input {
     }
 
     private int getInt() {
-        int newInput;
-        newInput = this.scanner.nextInt();
-        scanner.nextLine();
-        return newInput;
+        int newInt = 0;
+        try {
+            newInt = Integer.valueOf(getString());
+        } catch (Exception e) {
+            System.out.println("Invalid format. Please try again.");
+            newInt = getInt();
+        }
+        return newInt;
     }
 
     public double getDouble(double min, double max) {
@@ -76,11 +80,37 @@ public class Input {
     }
 
     private double getDouble() {
-        double newInput;
-        newInput = this.scanner.nextDouble();
-        scanner.nextLine();
-        return newInput;
+        double newDouble = 0.0;
+        try {
+            newDouble = Double.valueOf(getString());
+        } catch (Exception e) {
+            System.out.println("Invalid format. Please try again.");
+            newDouble = getDouble();
+        }
+        return newDouble;
     }
 
+    public int getBinary() {
+        System.out.println("Please enter a binary number.");
+        int binary = 0;
+        try {
+            binary = Integer.valueOf(getString(), 2);
+        } catch (Exception e) {
+            System.out.println("Invalid format. Please try again.");
+            binary = getInt();
+        }
+        return binary;
+    }
 
+    public int getHex() {
+        System.out.println("Please enter a hexidecimal number.");
+        int hexi = 0;
+        try {
+            hexi = Integer.valueOf(getString(), 16);
+        } catch (Exception e) {
+            System.out.println("Invalid format. Please try again.");
+            hexi = getInt();
+        }
+        return hexi;
+    }
 }

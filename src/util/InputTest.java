@@ -4,9 +4,9 @@ public class InputTest {
     static Input input = new Input();
 
     public static void main(String[] args) {
-
         System.out.println();
         System.out.println("Can you ride a bike? ");
+        System.out.println();
         System.out.println("Answered in the affirmative = " + input.yesNo());
         System.out.println("Answered in the affirmative = " + input.yesNo("How about a unicycle? "));
 
@@ -20,6 +20,9 @@ public class InputTest {
         double doubleMin = 3.1415;
         double doubleMax = 6.2830;
         System.out.println("You entered a " + input.getDouble(doubleMin, doubleMax));
-        System.out.println("You entered a " + input.getDouble(doubleMin, doubleMax,"I also need another one - thanks."));
+        System.out.println("You entered a " + input.getDouble(doubleMin, doubleMax, "I also need another one - thanks."));
+
+        System.out.println(input.getBinary());
+        System.out.println(input.getHex());
     }
 }
