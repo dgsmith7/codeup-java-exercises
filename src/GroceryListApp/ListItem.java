@@ -1,41 +1,37 @@
 package GroceryListApp;
 
-import java.util.HashMap;
-
 public class ListItem {
-    HashMap<String, String> item = new HashMap<>(); // name:category
-    int quantity;
+    private String name;
+    private String category;
+    private int quantity;
 
     public ListItem(String name, String cat, int quant) {
-        this.item.put(name, cat);
+        this.name = name;
+        this.category = cat;
         this.quantity = quant;
     }
 
-    public HashMap<String, String> getItem() {
-        return this.item;
-    }
-
     public String getName() {
-        return this.item.keySet().toString();
+        return this.name;
     }
 
     public String getCategory() {
-        return this.item.get(this.item.keySet().toString());
+        return this.category;
     }
 
     public int getQuantity() {
         return this.quantity;
     }
 
-    public void changeName(String newName) {
-        this.item.replace(newName, this.getCategory());
+    public void setName(String newName) {
+        this. name = newName;
     }
 
-    public void changeCategory(String newCat) {
-        this.item.replace(this.getName(), newCat);
+    public void setCategory(String newCat) {
+        this.category = newCat;
     }
 
-    public void changeQuantity(int newQuant) {
+    public void setQuantity(int newQuant) {
         this.quantity = newQuant;
     }
 }
