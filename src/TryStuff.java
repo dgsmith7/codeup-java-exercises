@@ -2,8 +2,14 @@ import java.util.Scanner;
 
 public class TryStuff {
     public static void main(String[] args) {
-        //guessAge();
-    }
+        int[] highScores = {5,5,5,5,5,5,5};
+        int i = 0;
+        for (int value : highScores)
+        {
+            System.out.println( highScores[i] );
+            System.out.println( value );
+            i ++;
+        }    }
 
 
     public static void guessAge() {
