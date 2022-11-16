@@ -7,9 +7,9 @@ import java.util.*;
 import static java.lang.Integer.parseInt;
 
 public class List {
-    private static Input input = new Input();
+    private static final Input input = new Input();
     private static ArrayList<ListItem> list = new ArrayList<>();
-    private static HashMap<String, String> categories = new HashMap<>();
+    private static final HashMap<String, String> categories = new HashMap<>();
 
     public static void main(String[] args) {
         if (!input.yesNo("Do you want to make a new list?")) {
